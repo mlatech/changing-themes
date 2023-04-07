@@ -1,17 +1,13 @@
 import React from "react"
 import {ThemeContext} from "./ThemeContext"
 
-function Footer(props){
+export default function Main(){
 
     const {color} = React.useContext(ThemeContext)
-    
-    return(
-        <div className={`${color}-theme`}>
-            <h4>The amazing footer</h4>
-        </div>
-        
 
+    return (
+        <div className={`${color}-theme`}>
+        <h3>You are currently using {color}</h3>
+        </div>
     )
 }
-
-export default Footer

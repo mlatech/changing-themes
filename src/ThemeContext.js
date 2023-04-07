@@ -1,10 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 
 const ThemeContext = React.createContext()
 
 function ThemeContextProvider(props){
 
-  const [color, setColor] = useState("dark")
+  const [color, setColor] = React.useState("dark")
 
   function toggleTheme(){
     setColor(prevColor => prevColor === "dark" ? "light" : "dark")
@@ -19,3 +19,5 @@ function ThemeContextProvider(props){
     </ThemeContext.Provider>
   )
 }
+
+export {ThemeContext, ThemeContextProvider}
